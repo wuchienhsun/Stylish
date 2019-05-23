@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/checkout/style.css">
+    <title>checkout</title>
+    <style>
+            body {
+                margin: 20px 0;
+            }
+            .jumbotron {
+                text-align: center;
+            }
+            .text-left {
+                text-align: left;
+            }
+            .container {
+                max-width: 750px;
+            }
+            form {
+                padding: 40px;
+                box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+            }
+            .tappay-field-focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            }
+            .has-error .tappay-field-focus {
+                border-color: #843534;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+            }
+            .has-success .tappay-field-focus {
+                border-color: #2b542c;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;
+            }
+        </style>
+</head>
+
+<body>
+        <nav class="nav-main">
+
+                <div class="nar-bar-l">
+                    <a href="https://www.wuhsun.com/">
+                        <img class="logo-img" src="./public_img/logo.png" alt="">
+                    </a>
+                            
+                </div>
+                <!-- nav-L -->
+    
+                <div class="nar-bar-m">
+                    <div class="nav-bar-m-inline">
+                            
+                        <span class="item-1"><a href="">女 裝</a></span>
+                        <span>|</span>
+                        <span class="item-2"><a href="">男 裝</a></span>
+                        <span>|</span>
+                        <span class="item-3"><a href="">配 件</a></span>
+    
+                    </div>
+                </div>
+                <!-- nav-M -->
+                <div class="nar-bar-r">
+                        <ul class="nav-icon">
+                            <div class="search-icon-div">
+                                <input type="text">                            
+                                <li><a href="https://www.wuhsun.com/" ><img class="search-icon" src="./public_img/search.png" alt=""></a></li>
+                            </div>
+                            <div class="cart-icon-div">
+                                <li><a href="https://www.wuhsun.com/checkout.html"><img class="cart-icon" src="./public_img/cart.png" alt=""></a></li>
+                            </div>
+                            <div class="member-icon-div">
+                                <li><a href="https://www.wuhsun.com/user.html"><img class="member-icon" src="./public_img/member.png" alt=""></a></li>                            
+                            </div>                        
+                        </ul>                
+                </div>
+                <!-- nav-R -->
+            </nav>
+        <!-- nav -->
+    
+        <div id="black-block">
+    <!-- black block -->
+        </div>
+
+        <div class="containers">
+            <div id="buy-text">
+                <span id="buy-cart-span">購物車</span>
+                <span id="buy-amount-span">數量</span>
+                <span id="buy-price-span">單價</span>
+                <span id="buy-total-span">小計</span>
+            </div>
+            <div id="product_body">
+                <div id="product_info">
+                    <img id="product_info_img" src="" alt="">
+                    <div>
+                        <div id="product_info_div_span">                            
+                            <span id="product_info_title">                            </span>
+                        </div>
+                        <div id="product_info_div_span">
+                            <span id="product_info_id"></span>
+                        </div>
+                        <div id="product_info_div_span">
+                            <span>顏色 ｜</span>
+                            <span id="product_info_color"></span>
+                        </div>
+                        <div id="product_info_div_span">
+                            <span>尺寸｜</span>
+                            <span id="product_info_size"></span>
+                        </div>                                                                        
+                    </div> 
+                    <div id="product_info_div_3">
+                        <div id="product_amount_div">
+                            <span><select name="" id=""><option value="1">1</option></select></span>
+                        </div>
+                        <div id="product_price_div">
+                            <span>NT.</span><span id="product_price_span"></span>
+                        </div>
+                        <div id="product_total_div">
+                            <span>NT.</span><span id="product_total_span"></span>
+                        </div>
+                    </div>                   
+                </div>                
+            </div>
+            <div id="select_derver_way">
+                <span>配送國家
+
+                        <select name="" id="">
+                                <option value ="taiwan">臺灣及離島</option>
+                            </select>
+                </span>
+                
+                <span>付款方式
+
+                        <select name="" id="">
+                            <option value="">宅配貨到付款</option>        
+                            </select>
+                </span>
+                
+            </div>
+            <div id="description">
+                <span>※ 提醒您：</span> </br>
+                <span>● 選擇宅配-請填寫正確收件人資訊，避免包裹配送不達</span> </br>
+                <span>● 選擇超商-請填寫正確收件人姓名(與證件相符)，避免無法領取</span>
+            </div>                                        
+            <div id="checkout_body">
+                <span>訂購資料</span>
+                <div id="checkout_body_div">
+                    <div>
+                        <span>收件人姓名</span> <input id="checkout_body_div_input_name" type="text"> 
+                    </div>
+                    <div>
+                        <span>手機</span> <input id="checkout_body_div_input_phone" type="text"> 
+                    </div>                    
+                    <div>
+                        <span>地址</span> <input id="checkout_body_div_input_address" type="text"> 
+                    </div>
+                    <div>
+                        <span>配送時間</span> <input name="times" value="8~12" type="radio">8~12 <input name="times" value="14~20" type="radio">14~20 <input name="times" value="anytime" type="radio" checked>不指定
+                         
+                    </div>
+                    
+
+                </div>
+                
+
+
+                <div id="checkout_body_div_detail">
+                    <div>
+                        總金額
+                        <label>NT.</label><span id="checkout_body_div_detail_span">1200</span>
+                    </div>
+                    <div>
+                        運費
+                        <label for="">NT.</label><span>0</span>
+                    </div>
+                    <div id="black_line"></div>
+                    <div>
+                        應付金額
+                        <label for="">NT.</label><span id="checkout_body_div_detail_span_2">1200</span>
+                    </div>                    
+                </div>
+            
+            </div>
+        </div>
+        <div class="container">
+                <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group card-number-group">
+                            <label for="card-number" class="control-label"><span id="cardtype"></span>卡號</label>
+                            <div class="form-control card-number"></div>
+                        </div>
+                        <div class="form-group expiration-date-group">
+                            <label for="expiration-date" class="control-label">卡片到期日</label>
+                            <div class="form-control expiration-date" id="tappay-expiration-date"></div>
+                        </div>
+                        <div class="form-group cvc-group">
+                            <label for="cvc" class="control-label">卡片後三碼</label>
+                            <div class="form-control cvc"></div>
+                        </div>
+            
+                        <button id="checkout_button" type="submit" class="btn btn-default">Pay</button>
+                    </form>
+                </div>
+
+        
+
+
+
+        <footer>
+                <div id="footer-text">
+                    <span>關於 Stylish</span>
+                    <span>|</span>
+                    <span>服務條款</span>
+                    <span>|</span>
+                    <span>隱私政策</span>
+                    <span>|</span>
+                    <span>聯絡我們</span>
+                    <span>|</span>
+                    <span>FQA</span>
+                </div>
+                <div id="footer-img">
+                    <img src="./public_img/line.png" alt="">
+                    <img src="./public_img/twitter.png" alt="">
+                    <img src="./public_img/facebook.png" alt="">
+                </div>
+                <span>© 2018. All rights reserved.</span>
+            </footer>
+        </body>
+        <script src="./js/checkout.js"></script>
+
+
+
+
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+    <script>
+        TPDirect.setupSDK(12348, 'app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF', 'sandbox')
+        TPDirect.card.setup({
+            fields: {
+                number: {
+                    element: '.form-control.card-number',
+                    placeholder: '**** **** **** ****'
+                },
+                expirationDate: {
+                    element: document.getElementById('tappay-expiration-date'),
+                    placeholder: 'MM / YY'
+                },
+                ccv: {
+                    element: $('.form-control.cvc')[0],
+                    placeholder: '後三碼'
+                }
+            },
+            styles: {
+                'input': {
+                    'color': 'gray'
+                },
+                'input.ccv': {
+                    // 'font-size': '16px'
+                },
+                ':focus': {
+                    'color': 'black'
+                },
+                '.valid': {
+                    'color': 'green'
+                },
+                '.invalid': {
+                    'color': 'red'
+                },
+                '@media screen and (max-width: 400px)': {
+                    'input': {
+                        'color': 'orange'
+                    }
+                }
+            }
+        })
+        // listen for TapPay Field
+        TPDirect.card.onUpdate(function (update) {
+            /* Disable / enable submit button depend on update.canGetPrime  */
+            /* ============================================================ */
+
+            // update.canGetPrime === true
+            //     --> you can call TPDirect.card.getPrime()
+            // const submitButton = document.querySelector('button[type="submit"]')
+            if (update.canGetPrime) {
+                // submitButton.removeAttribute('disabled')
+                $('button[type="submit"]').removeAttr('disabled')
+            } else {
+                // submitButton.setAttribute('disabled', true)
+                $('button[type="submit"]').attr('disabled', true)
+            }
+
+
+            /* Change card type display when card type change */
+            /* ============================================== */
+
+            // cardTypes = ['visa', 'mastercard', ...]
+            var newType = update.cardType === 'unknown' ? '' : update.cardType
+            $('#cardtype').text(newType)
+
+
+
+            /* Change form-group style when tappay field status change */
+            /* ======================================================= */
+
+            // number 欄位是錯誤的
+            if (update.status.number === 2) {
+                setNumberFormGroupToError('.card-number-group')
+            } else if (update.status.number === 0) {
+                setNumberFormGroupToSuccess('.card-number-group')
+            } else {
+                setNumberFormGroupToNormal('.card-number-group')
+            }
+
+            if (update.status.expiry === 2) {
+                setNumberFormGroupToError('.expiration-date-group')
+            } else if (update.status.expiry === 0) {
+                setNumberFormGroupToSuccess('.expiration-date-group')
+            } else {
+                setNumberFormGroupToNormal('.expiration-date-group')
+            }
+
+            if (update.status.cvc === 2) {
+                setNumberFormGroupToError('.cvc-group')
+            } else if (update.status.cvc === 0) {
+                setNumberFormGroupToSuccess('.cvc-group')
+            } else {
+                setNumberFormGroupToNormal('.cvc-group')
+            }
+        })
+
+        $('form').on('submit', function (event) {
+            event.preventDefault()
+            // fix keyboard issue in iOS device
+            forceBlurIos()
+            
+            const tappayStatus = TPDirect.card.getTappayFieldsStatus()
+            console.log(tappayStatus)
+
+            // Check TPDirect.card.getTappayFieldsStatus().canGetPrime before TPDirect.card.getPrime
+            if (tappayStatus.canGetPrime === false) {
+                alert('can not get prime')
+                return
+            }
+
+            // Get prime
+            TPDirect.card.getPrime(function (result) {
+                if (result.status !== 0) {
+                    
+                    return
+                }
+                alert('結帳中')
+                 let url = 'http://52.193.1.88/admin/checkout';
+                // let url = 'http://localhost:3000/admin/checkout';
+                let prime = result.card.prime;
+                fe(url, prime, result);
+            })
+        })
+        
+        function getCookie(cname)
+{
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) 
+  {
+    var c = ca[i].trim();
+    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+  return "";
+}
+
+
+function delCookie(name) {
+  var exp = new Date();
+  exp.setTime(exp.getTime() - 1);
+  var cval = getCookie(name);
+  document.cookie = escape(name) + "=" + cval + "; expires=" + exp.toGMTString();
+}
+ 
+        function fe(url,prime, result) {
+        let product_info_title = document.getElementById('product_info_title').textContent;    
+        let product_info_id = document.getElementById('product_info_id').textContent;    
+        let product_info_color_name = document.getElementById('product_info_color').textContent;    
+        let product_info_size = document.getElementById('product_info_size').textContent;
+        let total_price =  document.getElementById('checkout_body_div_detail_span_2').textContent;
+        let name = document.getElementById('checkout_body_div_input_name').value;
+        let phone =document.getElementById('checkout_body_div_input_phone').value;
+        let address = document.getElementById('checkout_body_div_input_address').value;
+        let time = document.querySelector('input[name="times"]:checked').value;
+        let email = document.getElementById('exampleInputEmail1').value;
+        let token_cookies = getCookie("token");
+        delCookie('stylish'+product_info_id);
+
+        return fetch(url, {
+    method: 'POST',
+    // headers 加入 json 格式
+    headers:{
+        'content-type': 'application/json',
+        'Authentication': 'Bearer '+ token_cookies
+    },
+    // body 將 json 轉字串送出
+    body: JSON.stringify({
+        'prime': prime,
+        'order': {
+            'shipping': 'delivery',
+            'payment': "credit_card",
+            'subtotal': total_price,
+            'freight': '0',
+            'total': total_price,
+            'recipient': {
+            'name': name,
+            'phone': phone,
+            'email': email,
+            'address': address,
+            'time': time
+            },
+            'list': [
+            {
+                'id': product_info_id,
+                'name': product_info_title,
+                'price': total_price,
+                'color': {
+                'name': 'white',
+                'code': product_info_color_name
+                },
+                'size': product_info_size,
+                'qty': 'sd'
+            }
+            ]
+        }
+        })
+    }).then((response) => {
+        return response.json(); 
+    }).then((jsonData) => {console.log(jsonData);})
+    .then(()=>{window.location = 'http://52.193.1.88/checkout';})
+    .catch((err) => {
+        console.log('錯誤:', err);
+    })
+}
+
+        function setNumberFormGroupToError(selector) {
+            $(selector).addClass('has-error')
+            $(selector).removeClass('has-success')
+        }
+
+        function setNumberFormGroupToSuccess(selector) {
+            $(selector).removeClass('has-error')
+            $(selector).addClass('has-success')
+        }
+
+        function setNumberFormGroupToNormal(selector) {
+            $(selector).removeClass('has-error')
+            $(selector).removeClass('has-success')
+        }
+        
+        function forceBlurIos() {
+            if (!isIos()) {
+                return
+            }
+            var input = document.createElement('input')
+            input.setAttribute('type', 'text')
+            // Insert to active element to ensure scroll lands somewhere relevant
+            document.activeElement.prepend(input)
+            input.focus()
+            input.parentNode.removeChild(input)
+        }
+        
+        function isIos() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+    </script>
+</html>

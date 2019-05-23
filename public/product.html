@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/product/style.css">
+    <title>product</title>
+</head>
+<body>
+        <nav class="nav-main">
+
+                <div class="nar-bar-l">
+                        <a href="http://52.193.1.88/">
+                            <img class="logo-img" src="./public_img/logo.png" alt="">
+                        </a>
+                </div>
+                <!-- nav-L -->
+    
+                <div class="nar-bar-m">
+                    <div class="nav-bar-m-inline">
+                            
+                        <span class="item-1"><a href="">女 裝</a></span>
+                        <span>|</span>
+                        <span class="item-2"><a href="">男 裝</a></span>
+                        <span>|</span>
+                        <span class="item-3"><a href="">配 件</a></span>
+    
+                    </div>
+                </div>
+                <!-- nav-M -->
+                <div class="nar-bar-r">
+                        <ul class="nav-icon">
+                            <div class="search-icon-div">
+                                <input type="text">                            
+                                <li><a href="http://52.193.1.88/" ><img class="search-icon" src="./public_img/search.png" alt=""></a></li>
+                            </div>
+                            <div class="cart-icon-div">
+                                    
+                                    <li><a href="http://52.193.1.88/checkout.html"><img class="cart-icon" src="./public_img/cart.png" alt=""></a></li>
+                                <!-- <li><a href="http://localhost:3000/checkout.html"><img class="cart-icon" src="./public_img/cart.png" alt=""></a></li> -->
+                            </div>
+                            <div class="member-icon-div">
+                                <li><a href="http://52.193.1.88/user.html"><img class="member-icon" src="./public_img/member.png" alt=""></a></li>                            
+                            </div>                        
+                        </ul>                
+                </div>
+                <!-- nav-R -->
+            </nav>
+    
+        <!-- nav -->
+    
+        <div id="black-block"></div>
+    <!-- black block -->
+
+
+    <div id="product-body" class="container">
+        <!-- product main detail -->
+        <div>            
+            <img id="product_main_img" src="./uploads/file-1551319982566-main.jpg" alt="">            
+            <div>
+                <div id="product_name"><span id="product_name_span">test1</span> </div>
+                <div id="product_id">
+                    <span id="product_id_span">
+                        
+                    </span>
+                </div>
+                <div id="product_price"><span>TWD.<span id="product_price_span"></span></span></div>
+                <div id="black_line"></div>
+
+                <div id="product_color_place">
+                    <span>顏 色 ｜</span>
+                    <div id="product_color_place_div" style="display:inline-block">
+                        
+                    </div>
+                </div>
+
+                <div id="product_size_place">
+                    <span>尺 寸 ｜</span>
+                    <div id="product_size_place_div" style="display:inline-block">
+                        
+                    </div>
+                    </div>
+                <div id="product_amount">
+                    <span>數 量 ｜</span>
+                    <div id="amount_div" style="display:inline-block">
+                        <label id="amount_div_label_1" for="">-</label>
+                        <label for="" id="amount_div_label_2">1</label>
+                        <label for="" id="amount_div_label_3">+</label>
+                    </div>
+                </div>
+                
+                <button id="add_cart" onclick="javascript:location.href='http://52.193.1.88/checkout.html'">加入購物車</button>
+                <div id="product_note"><span id="product_note_span"></span></div>
+                <div id="product_texture"><span id="product_texture_span"></span></div>
+                <div id="product_description"><span id="product_description_span"></span></div>
+
+                <div id="product_place"><span>加工產地/</span><span id="product_place_span"></span></div>
+
+            </div>
+        </div>
+
+
+        <!-- more details -->
+        <div id="mid-line-div">
+            <span style="margin-left: 10%; margin-right: 5%">細部說明</span> <div id="mid-line"></div>
+        </div>
+
+
+        <!-- detailz start -->
+        <div id="more_detail">
+            <div>
+                <div id="more_detail_div" style="display: block;">
+                    <span id="more_detail_span"></span>
+                </div> 
+
+                <div>
+                    <img id="img_1" src="" alt="">
+                </div>
+
+                <div style="display: block;">
+                    <span id="more_detail_span"></span>
+                </div>                
+                    
+                <div>
+                    <img id="img_2" src="" alt="">
+                </div>
+            </div>                        
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <footer>
+            <div id="footer-text">
+                <span>關於 Stylish</span>
+                <span>|</span>
+                <span>服務條款</span>
+                <span>|</span>
+                <span>隱私政策</span>
+                <span>|</span>
+                <span>聯絡我們</span>
+                <span>|</span>
+                <span>FQA</span>
+            </div>
+            <div id="footer-img">
+                <img src="./public_img/line.png" alt="">
+                <img src="./public_img/twitter.png" alt="">
+                <img src="./public_img/facebook.png" alt="">
+            </div>
+            <span>© 2018. All rights reserved.</span>
+        </footer>
+    
+</body>
+<script src="./js/product.js"></script>
+</html>

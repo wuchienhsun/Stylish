@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+    web:
+        image: node/myapp
+        container_name: web        
+        ports:
+            - "443:443"
+        depends_on:
+            - mysql
+        command: /bin/bash -c "npm install && yarn start"
+    mysql:
+        image: mysql
+        container_name: mysqldatabase
+        ports:
+            - "8889:8889"        

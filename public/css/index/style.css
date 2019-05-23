@@ -1,0 +1,332 @@
+
+body {
+    margin: 0px auto;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-main {
+    height: 75px;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: row none;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+}
+
+  .nar-bar-l{
+    margin:0 auto;
+    
+    flex: 1;
+  }
+
+  .logo-img{ 
+    width: auto;
+	height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 26px;
+    padding-left: 60px;    
+     padding-bottom: 26px; 
+  }
+
+
+  /* 圖片固定大小 */
+  .nar-bar-l img {
+    max-height: 36px;
+    max-width: 193.5px;
+    myimg:expression(onload=function(){ 
+    this.style.width=(this.offsetWidth > 600)?"600px":"auto"});
+    } 
+    /* 圖片固定大小 */
+  .nar-bar-m{
+    flex: 2;
+    flex-basis: 200px;
+  }
+
+  .nav-bar-m-inline{
+    flex: auto;
+    margin-top: 37px;
+    margin-left: 65px;
+  }
+  .nav-bar-m-inline span a:hover {
+    color: #8b572a;
+  }
+
+  .nav-bar-m-inline span{
+      margin-right: 5%;
+  }
+
+  .nav-bar-r {
+    flex: 1;
+  }
+  .nav-icon{
+    display: flex;
+    padding-right: 40px;
+    padding-top: 5px;
+  }
+  
+  /* 44px */
+  .search-icon-div{
+    /* width:214px; */
+    display: flex;
+    padding-left: 20px;
+    max-height: 29px;
+    border: 1px solid #979797;
+    border-radius: 50px;
+    margin-right: 31.5px;
+  }
+  
+.search-icon-div>input{
+    border: 0px;
+    outline:none;
+    cursor: pointer;
+    width: 154px;
+  }
+
+  .search-icon{
+    margin:0 auto;
+    max-height: 33px;
+  }
+  .cart-icon{
+    max-height: 33px;
+  }
+  .member-icon{
+    max-height: 33px;
+  }
+  .cart-icon-div{
+    margin-right: 31.5px;
+  }
+
+  ul li {    
+    list-style-type: none;
+  }
+
+
+
+/* nav bar  */
+#black-block{
+    top: 0px;
+    background-color: black;
+    height: 30px;
+}
+#c_img_pla {
+    width: 100%;
+    position:relative;
+}
+
+
+#c_img_pla>img{
+    width: 100%;
+    /* height: 500px; */
+    background-color: #313538;
+    z-index: -1;
+}
+
+#c_img_pla>div{
+    left:25%; 
+    top:30%;
+    position:absolute;
+    color: #070707;
+}
+#c_img_pla>div>div{
+    margin-bottom: 15px;
+}
+
+
+/* img change */
+.coverflow{
+    height: 500px;
+    position: relative;
+}
+.coverflow>a{
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+filter: alpha(opacity=0);
+/*當圖片數量增加，影片長度需更改，變為5s*圖片數量*/
+-webkit-animation: silder 15s linear infinite;
+                animation: silder 15s linear infinite;
+}
+
+/*動畫關鍵影格*/
+@-webkit-keyframes silder {
+    3% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    27% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    30% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+@keyframes silder {
+    3% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    27% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    30% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+/*每個圖片各延遲5秒*/
+.coverflow>a:nth-child(3) {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;               
+}
+
+.coverflow>a:nth-child(2) {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+}
+
+.coverflow>a:nth-child(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;    
+}
+/*滑入時停止播放*/
+.coverflow:hover>a{
+-webkit-animation-play-state: paused;
+        animation-play-state: paused;
+}
+/* img change End */
+
+.coverflow a img{
+    width: auto;
+	height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+#product-body{
+    margin-top: 5%;
+    flex-wrap: wrap;
+    padding-bottom: 115px;
+    display: flex;
+    justify-content: center;
+}
+#product-body div{
+    height: 360px;
+    width: 270px;
+}
+#product-body div>div>div>div{
+    max-width:18px; 
+    max-height:18px;
+}
+#product-body div img{
+    max-height: 360px;
+    max-width: 270px;
+}
+#p-item{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+#p-item>div>div{
+    max-height:18px;
+}
+#p-item>div>div>div{
+    margin-right: 2px;
+}
+#p-item-3{
+    margin-left: 5%;
+}
+
+#product_color_code>div{
+    max-width:18px; 
+    max-height:18px;
+}
+
+/* footer */
+footer{
+    height: 86.23px;
+    position: relative;
+    margin-top: 300px;
+    background-color: #313538;
+    display: flex;
+}
+
+footer div span {
+    color: #f5f5f5;
+    font-size: 12px;
+    font-family: PingFangTC;
+    padding-right: 15px;
+}
+
+
+
+#footer-text{
+    flex: 2;
+    padding-top: 34px;
+    padding-left: 170px;
+    padding-right: 50px;
+}
+
+#footer-img{
+    flex: 1;
+    padding-top: 23px;
+}
+
+#footer-img img{
+    padding-right: 10px;
+}
+
+footer span {
+    color: #828282;  
+    padding-right: 285px;  
+    padding-top: 34px;
+    font-size: 12px;
+}
+
+
+@media(max-width:1200px){
+    .coverflow{
+        height: 375px;
+        position: relative;
+
+    }
+    #product-body{
+        margin-top: 5%;
+        flex-wrap: wrap;
+        padding-bottom: 115px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media(min-width:600px){
+    #product-body div{
+        height: 380px;
+        width: 270px;
+    }
+}
+
+
+@media(min-width:500px){
+    #product-body div{
+        height: 400px;
+        width: 270px;
+    }
+}

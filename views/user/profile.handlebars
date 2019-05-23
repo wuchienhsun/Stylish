@@ -1,0 +1,13 @@
+<h1>會員資料</h1>
+
+<div class="card card-body">
+    <h3>會員ID：{{text.id}}</h3> <br>
+    <h3>會員姓名：{{text.name}}</h3> <br>
+    <h3>會員信箱：{{text.email}}</h3> <br>
+    <h3>照片：<img src="" alt=""> </h3>
+    <form action="/user/loginout" method="POST">
+    <button type="submit" class="btn btn-danger btn-block mb-3">登出</button>
+    </form>
+    <a href="/admin/product/manage" class="btn btn-dark">管理頁面</a>
+</div>
+

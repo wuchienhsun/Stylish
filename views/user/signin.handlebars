@@ -1,0 +1,134 @@
+{{#if err}}
+    <div class="alert alert-success">{{err}}</div>
+{{/if}}
+
+    <div class="card card-body form-group">
+        <h1>sign in</h1>
+        <div>
+            <form action="/user/signin" method="POST">
+                email<input id="email" name="email" class="form-control" type="text" required> <br>
+                password<input id="pwd"  name="password" type="password" class="form-control" type="text" required> <br>
+                <button id="btn" class="btn btn-dark btn-block">Submit</button>
+            </form>      
+            {{!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button> --}}
+        </div>
+        
+
+    </div>
+</div>
+
+{{!-- 
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=870704919939573&autoLogAppEvents=1"></script>
+<script>
+
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '870704919939573',
+      xfbml      : true,
+      version    : 'v3.2'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);      
+    });
+  }
+
+function statusChangeCallback(response) {
+
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      let accessToken = response.authResponse.accessToken;
+      //let url = 'https://www.wuhsun.com/user/signin'; 
+      let url = 'http://localhost:3000/user/signin';    
+      fe(accessToken, url);  
+      testAPI();
+    } 
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+
+function fe(accessToken,url) {
+        return fetch(url, {
+    method: 'POST',
+    // headers 加入 json 格式
+    headers:{'content-type': 'application/json'},
+    // body 將 json 轉字串送出
+    body: JSON.stringify({
+        'provider':'facebook',
+        'access_token':accessToken
+    })
+    })
+    .then((response) => {
+        return response; 
+    }).then((jsonData) => {
+        console.log(jsonData);
+    }).catch((err) => {
+        console.log('錯誤:', err);
+    })
+}
+
+
+    
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('pwd').value;
+//    let url = 'https://www.wuhsun.com/user/signin';
+    let url = 'http://localhost:3000/user/signin';
+    let token_cookies = document.cookie.replace('token=','');
+
+    let btn = document.getElementById('btn');
+    btn.addEventListener("click", send(email, password, url, token_cookies));     
+     
+     function send(url,token_cookies, email, password){
+         fetch(url, {
+    method: 'POST',
+    // headers 加入 json 格式
+    headers:{'content-type': 'application/json'},
+    // body 將 json 轉字串送出
+    body: JSON.stringify({
+        'provider':'native',
+        'email': email,
+        'password':password        
+    })
+    }).then((response) => {return response})
+        .catch((err) => {
+        console.log('錯誤:', err);
+    })
+}
+     
+    // window.location = 'http://localhost:3000/user';
+    // window.location = 'https://www.wuhsun.com/user';
+
+
+
+</script> --}}

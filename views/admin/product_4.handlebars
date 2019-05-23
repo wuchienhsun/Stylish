@@ -1,0 +1,30 @@
+<div class="container">
+        <div class="card card-body">
+                <h1>{{title}}</h1>
+                <h6>目前商品數量：{{productName.length}}</h6>
+                <h3>新增圖片</h3>
+                <form action="/admin/product/admin_product_add_4" enctype="multipart/form-data" method="POST">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Product name</label>
+                    <select name="itemName" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                      <option selected>Choose...</option>
+                      {{#each productName}}
+                      <option value="{{id}}">{{title}}</option>
+                      {{else}}
+                      <option value="1">No Product</option>
+                      {{/each}}
+                    </select>
+                    
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Other Image file</label>
+                        <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1" required>
+                        <label for="exampleFormControlFile1">Other Image file-2</label>
+                        <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1" required>                        
+                    </div>
+                    
+
+                    <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <a href="/admin/product/manage" class="btn btn-dark">管理頁面</a>
+            </div>
+        </div>
