@@ -24,7 +24,7 @@
     "mysql2": "^1.6.5",
     "node-cache": "^4.2.0",
     "node-command-line": "^1.0.2",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.7",
     "request": "^2.88.0",
     "sequelize": "^4.43.0",
     "session-file-store": "^1.2.0"
